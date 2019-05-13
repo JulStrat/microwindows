@@ -7,6 +7,8 @@
 #ifndef __NANOWM_H
 #define __NANOWM_H
 
+#include "mwconfig.h"
+
 /* configurable options*/
 #define OUTLINE_MOVE		0		/* draw outline only during window move*/
 #define NO_CORNER_RESIZE	0		/* don't resize windows on corner drag*/
@@ -113,7 +115,7 @@ int wm_key_down(GR_EVENT_KEYSTROKE *event);
 int wm_key_up(GR_EVENT_KEYSTROKE *event);
 int wm_focus_in(GR_EVENT_GENERAL *event);
 int wm_focus_out(GR_EVENT_GENERAL *event);
-int wm_update(GR_EVENT_UPDATE *event);
+int wm_chld_update(GR_EVENT_UPDATE *event);
 int wm_chld_update(GR_EVENT_UPDATE *event);
 
 void wm_container_exposure(win *window, GR_EVENT_EXPOSURE *event);

@@ -160,7 +160,9 @@ typedef struct {
 #define	GR_BUTTON_R		MWBUTTON_R 	/* right button*/
 #define	GR_BUTTON_M		MWBUTTON_M	/* middle button*/
 #define	GR_BUTTON_L		MWBUTTON_L	/* left button*/
-#define	GR_BUTTON_ANY		(MWBUTTON_R|MWBUTTON_M|MWBUTTON_L) /* any*/
+#define	GR_BUTTON_SCROLLUP	MWBUTTON_SCROLLUP
+#define	GR_BUTTON_SCROLLDN	MWBUTTON_SCROLLDN
+#define	GR_BUTTON_ANY		(MWBUTTON_R|MWBUTTON_M|MWBUTTON_L|MWBUTTON_SCROLLUP|MWBUTTON_SCROLLDN) /* any*/
 
 /* GrSetBackgroundPixmap flags */
 #define GR_BACKGROUND_TILE	0	/* Tile across the window */
@@ -936,7 +938,7 @@ void		GrGetWindowFBInfo(GR_WINDOW_ID wid, GR_WINDOW_FB_INFO *fbinfo);
 GR_CURSOR_ID GrSetCursor(GR_WINDOW_ID wid, GR_SIZE width, GR_SIZE height,
 				GR_COORD hotx, GR_COORD hoty, GR_COLOR foreground,
 				GR_COLOR background, GR_BITMAP *fbbitmap, GR_BITMAP *bgbitmap);
-//#define GrSetBorderColor					GrSetWindowBorderColor
+/*#define GrSetBorderColor					GrSetWindowBorderColor*/
 #define GrCreateFont(name,height,plogfont)	GrCreateFontEx(name,height,height,plogfont)
 #define GrSetFontSize(fontid,height)		GrSetFontSizeEx(fontid,height,height)
 #define GrNewPixmap(width,height,pixels)	GrNewPixmapEx(width,height,0,pixels)

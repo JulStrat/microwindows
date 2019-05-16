@@ -4,14 +4,15 @@ Microwindows or Nano-X is a small graphical windowing system that implements
 both Win32 and Nano-X (X11-like) APIs for clipped graphics drawing in windows
 on Linux, Mac OS X, EMSCRIPTEN, Android and other platforms. It is
 Open Source and licenced under the the Mozilla Public License.
-For creating GUIs, the Win32 builtin controls and TinyWidget's controls
-based on Nano-X are included. FLTK can be used with the X11 compability library NX11.
+For creating GUIs, the Nuklear immediate mode GUI, Win32 builtin controls,
+and TinyWidget's controls based on Nano-X are included.
+FLTK can be used with the X11 compability library NX11.
 
-This is an overview of the system:
+This is a slightly outdated overview of the system:
 
-<img src="https://user-images.githubusercontent.com/10487642/40860798-38ddb54a-65d6-11e8-8ab8-9c1f1f329f47.png" width="90%"></img> 
+![Architecture](/screenshots/Architecture-Microwindows.png)
 
-Sopme of the supported platforms are listed at the bottom on the left side. Next to
+Some of the supported platforms are listed at the bottom on the left side. Next to
 that there are available screen drivers, mouse drivers and keyboard
 drivers. The Nano-X / Microwindows engine is the core code that implements
 all drawing and clipping, with the Win32 and Nano-X graphical windowing APIs implemented in seperately
@@ -24,8 +25,10 @@ and run without recompilation.  The FLTK GUI toolkit runs based on NX11.
 
 ## Areas where Microwindows can be used are:
 
+- NEW: updated Nano-X window frame drawing code resembles Nuklear UI
+- NEW: Nuklear immmediate-mode GUI apps now supported in seperate windows
 - NEW: supports running multiple simultaneous Win32 apps on Linux, OS X and in a browser
-- NEW: original classic shareware Doom v1.10 ported to Nano-X
+- original classic shareware Doom v1.10 ported to Nano-X
 - run X11 or Win32 applications in a browser using EMSCRIPTEN
 - provide an excellent GUI for small embedded devices with FLTK, TinyWidgets or Win32
 - port the FLTK GUI toolkit to small platforms
@@ -41,7 +44,7 @@ Microwindows is very portable, is written in C and can be used on a wide range
 of platforms. 
 
 Currently supported platforms include **Linux, Mac OS X, Android, EMSCRIPTEN,
-Windows, Raspberry Pi, DOS DJGPP, RTEMS, ECOS, Sony PSP, Nintendo DS** and more. 
+Nuklear GUI, Windows, Raspberry Pi, DOS DJGPP, RTEMS, ECOS, Sony PSP, Nintendo DS** and more. 
 
 Currently supported screen drivers include **Memory-mapped framebuffer, X11,
 SDL 2, Allegro 5, Windows and an X11 based framebuffer emulator.**
@@ -77,6 +80,13 @@ plus the faq files in the doc directory. For Android there is an
 application note in the doc directory.
 
 An HTML based FAQ and Architecture document are available from the web site.
+
+## Gallery
+
+![Nuklear](/screenshots/Nuklear-Nano-X.png)
+![Emscripten](/screenshots/Emscripten-Microwindows.png)
+![FLTK](/screenshots/FLTK1.3.4-NXlib.png)
+![Doom](/screenshots/Doom3x.png)
 
 ## Links
 

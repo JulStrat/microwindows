@@ -4,7 +4,6 @@
  * Copyright (C) 2000, 2003, 2010, 2019 Greg Haerr <greg@censoft.com>
  * Copyright (C) 2000 Alex Holden <alex@linuxhacker.org>
  */
-#include <stdio.h>
 #include <stdlib.h>
 #include "nano-X.h"
 #include "nanowm.h"
@@ -70,6 +69,7 @@ int wm_handle_event(GR_EVENT *event)
 		return wm_chld_update(&event->update);
 	case GR_EVENT_TYPE_NONE:
 	case GR_EVENT_TYPE_TIMER:
+	case GR_EVENT_TYPE_CLOSE_REQ:
 	case GR_EVENT_TYPE_UPDATE:		/* no need for frame event handling*/
 		break;
 	case GR_EVENT_TYPE_ERROR:

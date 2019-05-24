@@ -1,3 +1,10 @@
+23 May 2019
+	* add MW_FEATURE_RESIZEFRAME, allows running standalone win32 or Nano-X apps with resized OS frame to app
+		requires LINK_APP_INTO_SERVER for Nano-X, set in include/mwconfig.h. Implemented on X11 only for now.
+	* fix runapp when mwin only, reverse colors in demo-aafont/demo-ttfont when NUKLEAR look
+22 May 2019
+	* fix small compiler-caught bugfixes in StretchBlt client coord conversion, MwPrepareDC clipregion bound 0,0
+	* cleanup nano-X eventclient debug printfs
 21 May 2019
 	* fix nuklear demo in LINK_APP_INTO_SERVER case with GrGetNextEventTimeout/GrPeekEvent issue
 	* fix nuklear application window size off-by-one

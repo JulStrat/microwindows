@@ -13,7 +13,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "uni_std.h> //for dup
+#include "uni_std.h" //for dup
 #include "device.h"  
 #include "genfont.h" 
 #include "genmem.h"
@@ -246,8 +246,6 @@ static void
 vesa_getscreeninfo(PSD psd,PMWSCREENINFO psi)
 {
 	gen_getscreeninfo(psd, psi);
-
-	psi->fbdriver = FALSE;	/* not running fb driver, no direct map */
 
 	if(scrdev.yvirtres > 800) {
 		/* SVGA 1400x1050*/
